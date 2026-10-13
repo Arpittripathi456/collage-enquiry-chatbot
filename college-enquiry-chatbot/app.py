@@ -12,7 +12,7 @@ st.write("Welcome to BIT Raipur College Enquiry System!")
 
 question = st.text_input("Ask your question:")
 
-BASE_DIR = os.path.dirname(os.path.abspath(_file_))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 faqs = pd.read_csv(os.path.join(BASE_DIR, "faqs.csv"))
 
 answers = {
