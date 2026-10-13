@@ -1,0 +1,4 @@
+@echo off
+cd /d "%USERPROFILE%\Desktop\college-enquiry-chatbot"
+py -3.14 -m streamlit run app.py
+pause
