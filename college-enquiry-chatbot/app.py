@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import os
 
 st.set_page_config(
     page_title="College Enquiry Chatbot",
@@ -10,7 +11,9 @@ st.title("🎓 College Enquiry Chatbot")
 st.write("Welcome to BIT Raipur College Enquiry System!")
 
 question = st.text_input("Ask your question:")
-faqs = pd.read_csv("faqs.csv")
+
+BASE_DIR = os.path.dirname(os.path.abspath(_file_))
+faqs = pd.read_csv(os.path.join(BASE_DIR, "faqs.csv"))
 
 answers = {
     "courses": "BIT Raipur offers engineering courses, including CSE.",
